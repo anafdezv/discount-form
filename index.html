@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png" />
+  <link rel="manifest" href="assets/favicon/site.webmanifest" />
+  <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#5bbad5" />
+  <meta name="msapplication-TileColor" content="#da532c" />
+  <meta name="theme-color" content="#ffffff" />
+  <title>Discount - Form ✨</title>
+
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/index.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__logo"></div>
+    <span class="header hidden">Siroko</span>
+  </header>
+  <main class="form">
+    <section class="form__step form-step-one ">
+      <div class="form__header"> <span class="form__header--pill">Paso 1 de 2</span>
+        <h1 class="form__header--title">¡Vamos Allá!</h1>
+        <p class="form__header--text">
+          Has llegado hasta el test de Siroko. Responde las siguientes preguntas
+          y genera tu código premiado a medida.
+        </p>
+      </div>
+      <form action="" class="form__card">
+        <h4 class="form__title">Uso Siroko desde...</h4>
+        <fieldset class="form__field">
+          <input class="form__field--radio form-step-one-radio" type="radio" id="2016" name="year" value="2016"
+            checked />
+          <label for="2016">2016</label>
+        </fieldset>
+        <fieldset class="form__field">
+          <input class="form__field--radio form-step-one-radio" type="radio" id="2017" name="year" value="2017" />
+          <label for="2017">2017</label>
+        </fieldset>
+        <fieldset class="form__field">
+          <input class="form__field--radio form-step-one-radio" type="radio" id="2018" name="year" value="2018" />
+          <label for="2018">2018</label>
+        </fieldset>
+        <fieldset class="form__field">
+          <input class="form__field--radio form-step-one-radio" type="radio" id="2019" name="year" value="2019" />
+          <label for="2019">2019</label>
+        </fieldset>
+        <fieldset class="form__field">
+          <input class="form__field--radio form-step-one-radio" type="radio" id="2020" name="year" value="2020" />
+          <label for="2020">2020</label>
+        </fieldset>
+        <fieldset class="form__field">
+          <input class="form__field--radio form-step-one-radio" type="radio" id="2021" name="year" value="2021" />
+          <label for="2021">2021</label>
+        </fieldset>
+        <button class="form__button button form-step-one-button">
+          Siguiente
+          <div class="form__button--icon"></div>
+        </button>
+      </form>
+    </section>
+    <section class="form__step form-step-two hidden">
+      <div class="form__header"> <span class="form__header--pill">Paso 2 de 2</span>
+        <h1 class="form__header--title">Vamos, una más</h1>
+
+      </div>
+      <form action="" class="form__card">
+        <h4 class="form__title">Por unas gafas Siroko, yo...</h4>
+        <fieldset class="form__field">
+          <input class="form__field--radio form-step-two-radio" type="radio" id="navaja" name="phrase" value="navaja"
+            checked />
+          <label for="navaja">Segaría a navaja</label>
+        </fieldset>
+        <fieldset class="form__field">
+          <input class="form__field--radio form-step-two-radio" type="radio" id="cachopo" name="phrase"
+            value="cachopo" />
+          <label for="cachopo">Rechazaría un cachopo</label>
+        </fieldset>
+        <fieldset class="form__field">
+          <input class="form__field--radio form-step-two-radio" type="radio" id="tierras" name="phrase"
+            value="tierras" />
+          <label for="tierras">Renunciaría a mis tierras</label>
+        </fieldset>
+        <fieldset class="form__field">
+          <input class="form__field--radio form-step-two-radio" type="radio" id="ternera" name="phrase"
+            value="ternera" />
+          <label for="ternera">Regalaría una ternera</label>
+        </fieldset>
+        <button class="form__button button form-step-two-button">
+          Siguiente
+          <div class="form__button--icon"></div>
+        </button>
+      </form>
+    </section>
+    <section class="form__step form-step-three hidden">
+      <div class="form__header"> <span class="form__header--pill">Tu premio está listo</span>
+        <h1 class="form__header--title">¡Enhorabuena!</h1>
+
+      </div>
+      <form action="" class="form__card">
+        <h4 class="form__title">Lo prometido es deuda</h4>
+        <div class="form__code">
+          <h3 class="form__code--text form-discount-code">
+            8HOPO
+          </h3>
+          <button class="form__code--button form-button-copy">Copiar</button>
+        </div>
+        <p class="form__header--text">
+          Introduce este código en tu próxima compra para conseguir tu premio.
+          ¡Disponible durante 20 minutos!
+        </p>
+        <div class="form__code--countdown form-countdown">
+          <div class="form__code--timer-icon"></div>
+          <p class="form__code--countdown--text form-timeout-text">20:00</p>
+        </div>
+
+        <div class="form__code--restart form-countdown-end hidden">
+          <div class="form__code--timer-icon"></div>
+          Código caducado. <button class="form-restart-button">Reiniciar.</button>
+        </div>
+
+        <a class="form__button button form-step-three-button" href="https://www.siroko.com" target="_blank"
+          rel="noopener noreferrer">
+          Ir a siroko.com
+          <div class="form__button--icon"></div>
+        </a>
+      </form>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__wrapper">
+      <p class="footer__text">
+        2016-2021 Siroko Solutions S.L. <br />
+        Todos los derechos reservados. <strong>Ver bases.</strong>
+      </p>
+    </div>
+  </footer>
+
+  <script src="/js/copyToClipboard.js"></script>
+  <script src="/js/index.js"></script>
+</body>
+
+</html>

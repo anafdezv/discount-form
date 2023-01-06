@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@font-face {
+  font-family: "liberator_sirokobold";
+  src: url("/fonts/liberatorsiroko-heavy-webfont.woff2") format("woff2"), url("/fonts/liberatorsiroko-heavy-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+:root {
+  height: 100vh;
+  width: 100vw;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: rgb(60, 28, 52);
+  background: linear-gradient(180deg, rgb(60, 28, 52) 0%, rgb(193, 40, 78) 99%, rgb(202, 40, 79) 100%);
+  background-image: url(../assets/images/background.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 25px;
+  gap: 25px;
+}
+@media (min-width: 834px) {
+  body {
+    padding: 35px;
+  }
+}
+
+.header {
+  max-width: 940px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+.header__logo {
+  background-image: url(../assets/logos/siroko.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  min-width: 32px;
+  min-height: 32px;
+}
+
+.form {
+  width: 100%;
+  height: 100%;
+  max-width: 940px;
+}
+.form__button--icon {
+  background-image: url(../assets/icons/arrow.svg);
+  width: 21px;
+  height: 12px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.form__step {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 25px;
+}
+.form__header {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  color: #FFFFFF;
+}
+.form__header--pill {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #339B95;
+  padding: 3px 7px;
+  font: 700 9px/11px Inter, sans-serif;
+  color: #2C5E5B;
+  border-radius: 3px;
+}
+.form__header--title {
+  font: 800 35px/35px liberator_sirokobold, sans-serif;
+}
+.form__header--text {
+  color: #FFFFFF;
+  font: 400 16px/19px Inconsolata, monospace;
+}
+.form__card {
+  width: 100%;
+  background-color: #311429;
+  border-radius: 3px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.form__title {
+  color: #EFE5C3;
+  font: 700 12px/16px Inter, sans-serif;
+  text-transform: uppercase;
+}
+.form__field {
+  border: none;
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  color: #FFFFFF;
+  font: 400 15px/18px Inconsolata, monospace;
+  gap: 10px;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.09);
+}
+.form__field > label {
+  width: 100%;
+}
+.form__field--radio {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  margin: 0;
+  color: #FFFFFF;
+  width: 20px;
+  height: 20px;
+  border: 1.5px solid currentColor;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form__field--radio::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em #FFFFFF;
+}
+.form__field--radio:checked::before {
+  transform: scale(1);
+}
+.form__field:has(:checked) {
+  background-color: #C92F58;
+}
+.form__code {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(270deg, #FFFFFF 0%, #BDBDBD 100%);
+  border-radius: 2px;
+  padding: 10px;
+}
+.form__code--text {
+  font: 700 25px/29px Inconsolata, monospace;
+}
+.form__code--button {
+  border: 2px solid #000000;
+  background-color: transparent;
+  font: 700 25px/29px Inconsolata, monospace;
+  font-size: 14px;
+  cursor: pointer;
+}
+.form__code--restart {
+  background-color: #C51414;
+  padding: 10px 15px;
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 700 15px/18px Inter, sans-serif;
+  color: #FFFFFF;
+}
+.form__code--restart > button {
+  background-color: transparent;
+  border: none;
+  color: #FFFFFF;
+  padding: 0;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  cursor: pointer;
+}
+.form__code--timer-icon {
+  background-image: url(../assets/icons/timer.svg);
+  width: 23px;
+  height: 23px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.form__code--countdown {
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  background-color: #2C0C23;
+  gap: 10px;
+  border-radius: 3px;
+}
+.form__code--countdown--text {
+  font: 700 27px/32px Inconsolata, monospace;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0px;
+  background: #000000;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.footer__text {
+  color: #FFFFFF;
+  font: 400 14px/16px Inconsolata, monospace;
+}
+.footer__wrapper {
+  width: 100%;
+  padding: 25px;
+  max-width: 940px;
+}
+@media (min-width: 834px) {
+  .footer__wrapper {
+    padding: 35px;
+  }
+}
+@media (min-width: 1440px) {
+  .footer__wrapper {
+    padding: 50px;
+  }
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 13px;
+  font: 700 15px/18px Inter, sans-serif;
+  color: #FFFFFF;
+  background-color: #339B95;
+  border: none;
+  border-radius: 4px;
+  transition: all 0.5;
+  cursor: pointer;
+}
+.button:hover {
+  filter: brightness(1.15);
+}
+
+.hidden {
+  display: none;
+}/*# sourceMappingURL=index.css.map */
